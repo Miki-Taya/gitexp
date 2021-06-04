@@ -3,6 +3,7 @@
 ~ Basic Commands ~
 ・git branch       # show your branch.
 ・git log    # show your commit histories and commit name and also.
+・git status  # show the status and todo. red->add, green->commit
 
 ~ Useful Commands ~
 ・git tree      # show your commit histories. Easy to see.
@@ -14,6 +15,7 @@
 ・git rm file_name  # Delete the file at local repository and reflect it to remote repository
 -> git commit -m "delete file_name"
 -> git push origin @masterORdevelop
+
 
 ~ Personal Use ~
 
@@ -53,6 +55,10 @@ Now, changes were reflected [HEAD->develop]
         -> git push origin develop
 Now, changes were reflected [HEAD->develop], [origin/develop]
 
+--------------
+if you confirmed above modifications are correct and this version is fine to be merged from master, you can go 6 and 7. Otherwise, repeat 1 ~ 5.
+--------------
+
   6. @develop #LOCAL -> @master #LOCAL
       ・Move to master and Merge master with develop
       -> git checkout master
@@ -65,7 +71,7 @@ Now, changes were reflected [HEAD->develop], [origin/develop], [master]
 Now, changes were reflected [HEAD->develop], [origin/develop], [master], [origin/develop]
 
 
-                           !!!!!!!!!!!!!!!!!!!COMPLETED!!!!!!!!!!!!!!!!!!!!
+ !!!!!!!!!!!!!!!!!!!COMPLETED!!!!!!!!!!!!!!!!!!!!
 
 
 
