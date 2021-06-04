@@ -1,0 +1,85 @@
+# How to Use git
+
+~ Basic Commands ~
+・git branch       # show your branch.
+・git log
+
+~ Useful Commands ~
+・git tree      # show your commit histories.
+・git checkout <commit name>       # you'll be back to the state which the commit was done.
+  -> cp file_name directory_name  # you get the file at the status you wanted
+  -> git checkout branch_name     # you return previous branch
+・git push -f origin master    # force to push wether the files have conflicts
+
+
+~ Personal Use ~
+
+  1. #LOCAL
+      if (your local repository != updated){
+          ・Get remote repository
+          -> git pull origin master
+          (above command equals  [-> git fetch origin master] then [-> git merge origin/master])
+      }else if (using device != usual one){
+          ・Clone the remote repository ( ex) algorithm as the repository name )
+          -> git clone https://github.com/Miki-Taya/algorithm.git
+      }else{ Just go to 2. }
+
+  2.　@NONE or @master or @develop   #LOCAL
+      if (neccesary branch != exsit){
+          ・Cut and Move to the branch
+          -> git branch develop(any branch name is ok.)
+          -> git checkout develop
+          (above two commands equal [-> git checkout -b develop])
+      }else if ( current branch == master ){
+          ・Move to the developing branch
+          -> git checkout develop
+      }else if ( current branch == develop ){ Just go to 3. }
+
+  3. @develop #LOCAL
+      ・Modify the files
+
+  4. @develop #LOCAL
+      ・Commit them
+        -> git add .("." equals all. use file name as well as)
+        -> git commit -m "any message"
+        (above two command equals [-> git commit -a -m "any message"])
+Now, changes were reflected [HEAD->develop]
+
+  5. @develop #LOCAL connect to #REMOTE: [origin/develop]
+      ・Reflect local committed changes to remote repository with develop branch
+        -> git push origin develop
+Now, changes were reflected [HEAD->develop], [origin/develop]
+
+  6. @develop #LOCAL -> @master #LOCAL
+      ・Move to master and Merge master with develop
+      -> git checkout master
+      -> git merge develop
+Now, changes were reflected [HEAD->develop], [origin/develop], [master]
+
+  7. @master #LOCAL connect to #REMOTE: [origin/master]
+      ・Reflect changes to remote repository with master branch
+      -> git push origin master
+Now, changes were reflected [HEAD->develop], [origin/develop], [master], [origin/develop]
+
+
+                           !!!!!!!!!!!!!!!!!!!COMPLETED!!!!!!!!!!!!!!!!!!!!
+
+
+
+~ Initial Setting ~
+
+    1. Access to GitHub(https://github.com/Miki-Taya) and create a remote repository ( ex) "algorithm" as repository name )
+
+    2. Enter working folder to create a local repository
+      -> git init
+
+    3. Create files and Commit them
+      -> git add .("." equals all. use file name as well as)
+      -> git commit -m "any message"
+      (above two command equals [-> git commit -a -m "any message"])
+
+    4. Register remote repository
+      -> git remote add origin(you can change this as remote repository) https://github.com/Miki-Taya(user name)/algorithm.git
+
+    5. Reflect local committed changes to remote repository
+      -> git push origin master
