@@ -85,7 +85,7 @@ Now, changes were reflected [HEAD->develop], [origin/develop], [master], [origin
     3. Create files and Commit them
       -> git add .("." equals all. use file name as well as)
       -> git commit -m "any message"
-      (above two command equals [-> git commit -a -m "any message"])
+      (for the first add&commit, you cannot use the shortcut command [git commit -a -m "message"])
 
     4. Register remote repository
       -> git remote add origin(you can change this as remote repository) https://github.com/Miki-Taya(user name)/algorithm.git
