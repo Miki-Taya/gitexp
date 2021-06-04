@@ -2,15 +2,18 @@
 
 ~ Basic Commands ~
 ・git branch       # show your branch.
-・git log
+・git log    # show your commit histories and commit name and also.
 
 ~ Useful Commands ~
-・git tree      # show your commit histories.
+・git tree      # show your commit histories. Easy to see.
 ・git checkout <commit name>       # you'll be back to the state which the commit was done.
   -> cp file_name directory_name  # you get the file at the status you wanted
   -> git checkout branch_name     # you return previous branch
 ・git push -f origin master    # force to push wether the files have conflicts
-
+・git push -d origin develop  # Delete remote repository develop
+・git rm file_name  # Delete the file at local repository and reflect it to remote repository
+-> git commit -m "delete file_name"
+-> git push origin @masterORdevelop
 
 ~ Personal Use ~
 
@@ -70,7 +73,7 @@ Now, changes were reflected [HEAD->develop], [origin/develop], [master], [origin
 
     1. Access to GitHub(https://github.com/Miki-Taya) and create a remote repository ( ex) "algorithm" as repository name )
 
-    2. Enter working folder to create a local repository
+    2. Enter working folder to create a local repository (ok to create new file, previously)
       -> git init
 
     3. Create files and Commit them
