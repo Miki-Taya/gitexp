@@ -19,8 +19,8 @@
 
 ~ Personal Use ~
 
-  1. #LOCAL
-      if (your local repository != updated){
+  1. @NONE or @master or @develop  #LOCAL
+      if (local repository or @develop != updated){
           ・Get remote repository
           -> git pull origin master
           (above command equals  [-> git fetch origin master] then [-> git merge origin/master])
