@@ -18,6 +18,24 @@
 -> git push origin @masterORdevelop
 
 
+~ Difficulties ~
+・error in <git push origin master>　　@master
+    -> git reset --hard <commit value>    # return to the status <commit value> shows.
+    -> git merge develop       # merge develop against
+    -> git push -f origin master     # push forcibly
+
+・conflict on merging  <git merge develop>  about the file "abc.py"   @master
+    if you wanna choose each file respectively,
+    1. -> git checkout --ours abc.py    # give precede to master. abc.py will be abc.py which was in master.
+    or -> git checkout --theirs abc.py   # give precede to develop. abc.py will be abc.py which was in develop.
+    2. -> add
+    3. -> commit
+    if you wanna choose each branch or all files at once,
+    1. -> git checkout --Xours master   # give precede to master. All files will be what were in master.
+    or -> git checkout --Xtheirs develop   # give precede to develop. All files will be what were in develop.
+
+
+
 ~ Personal Use ~
 
   1. @NONE or @master or @develop  #LOCAL
