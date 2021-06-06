@@ -68,6 +68,9 @@ Now, changes were reflected [HEAD->develop], [origin/develop], [master]
 
   7. @master #LOCAL connect to #REMOTE: [origin/master]
       ・Reflect changes to remote repository with master branch
+      !!!!!    CONFIRM WITH THE COMMAND [ -> git status ] AND FOLLOW THE GIT MESSAGE     !!!!!!!!
+      (-> git add .)
+      (-> git commit -m "messages")
       -> git push origin master
 Now, changes were reflected [HEAD->develop], [origin/develop], [master], [origin/develop]
 
