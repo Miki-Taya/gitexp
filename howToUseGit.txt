@@ -3,6 +3,7 @@
 ~ Basic Commands ~
 ・git branch       # show your branch.
 ・git log    # show your commit histories and commit name and also.
+-> to finish log, just tap [q].
 ・git status  # show the status and todo. red->add, green->commit
 
 ~ Useful Commands ~
